@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web Components</title>
+  <script src="modal.js"></script>
+</head>
+<body>
+  <uc-modal>
+    <h1 slot="title">The Modal Title</h1>
+    <p>This is our first web component!</p>
+  </uc-modal>
+  <button id="open-modal">Open Modal</button>
+  <button id="close-modal">Close Modal</button>
+  <script>
+    const modal = document.querySelector('uc-modal');
+    modal.addEventListener('close', () => {
+      console.log('Modal closed');
+      modal.remove();
+    });
+    const openModal = document.getElementById('open-modal');
+    openModal.addEventListener('click', () => {
+      modal.open();
+    });
+    const closeModal = document.getElementById('close-modal');
+    closeModal.addEventListener('click', () => {
+      modal.close();
+    });
+    modal.addEventListener('open', () => {
+      console.log('Modal opened');
+    });
+    modal.addEventListener('close', () => {
+      console.log('Modal closed');
+    });
+    modal.addEventListener('confirm', () => {
+      console.log('Modal confirmed');
+    });
+    
+    modal.addEventListener('slotchange', (e) => {
+      console.log('Slot changed', e);
+    });
+    modal.addEventListener('cancel', () => {
+      console.log('Modal canceled');
+    });
+  </script>
+</body>
+</html>
