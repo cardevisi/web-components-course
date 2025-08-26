@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module">
+    import Person from './person.js';
+    console.log(Person);
+    const person = new Person({ name: 'Carlos', age: 30 });
+    console.log(person.name);
+    console.log(person.age);
+    person.name = 'Carol';
+    person.age = 25;
+    console.log(person.name);
+    console.log(person.age);
+    console.log(person);
+  </script>
+</head>
+<body>
+  <h1>javascript-review</h1>
+</body>
+</html>

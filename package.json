@@ -1,0 +1,16 @@
+{
+  "name": "javascript-review",
+  "version": "1.0.0",
+  "main": "person.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ./javascript-review"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
